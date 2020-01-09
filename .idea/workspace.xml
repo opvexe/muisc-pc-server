@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f67ada26-b7b0-459e-8cbd-58f9d3d9c819" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/2020-1-8.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/middleware.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/application.go" beforeDir="false" afterPath="$PROJECT_DIR$/application/application.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/user.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handle/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/handle/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/request.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/base.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/base.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/routes/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/util/common.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/encrypt.go" beforeDir="false" afterPath="$PROJECT_DIR$/util/encrypt.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/util/response.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/validate.go" beforeDir="false" afterPath="$PROJECT_DIR$/util/validate.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

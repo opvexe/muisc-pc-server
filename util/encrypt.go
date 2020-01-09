@@ -60,7 +60,7 @@ func AesDecrypt(crypted, key []byte) (string, error) {
 
 /*
 	加密填充
- */
+*/
 func PKCS7Padding(ciphertext []byte, blockSize int) []byte {
 	padding := blockSize - len(ciphertext)%blockSize
 	padtext := bytes.Repeat([]byte{byte(padding)}, padding)
@@ -69,7 +69,7 @@ func PKCS7Padding(ciphertext []byte, blockSize int) []byte {
 
 /*
 	解密填充
- */
+*/
 func PKCS7UnPadding(origData []byte) []byte {
 	length := len(origData)
 	unpadding := int(origData[length-1])

@@ -19,7 +19,7 @@ func IsEmpty(a interface{}) bool {
 
 /*
 	数组去重
- */
+*/
 func RemoveRepeatedElement(arr []string) (newArr []string) {
 	newArr = make([]string, 0)
 	for i := 0; i < len(arr); i++ {
@@ -39,7 +39,7 @@ func RemoveRepeatedElement(arr []string) (newArr []string) {
 
 /*
 	大端法
- */
+*/
 func ByteToInt(b []byte) (int, error) {
 	bin_buf := bytes.NewBuffer(b)
 	var x int
