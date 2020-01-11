@@ -1,0 +1,62 @@
+# 运行模式(debug:调试,test:测试,release:正式)
+run_mode = "debug"
+# 版本号
+version = 1.0
+
+
+# http配置
+[http]
+# http监听地址
+host="0.0.0.0"
+# http监听端口
+port=9990
+# http优雅关闭等待超时时长
+shutdown_timeout=30
+
+
+
+# 日志配置
+[log]
+# 日志级别
+level=5
+
+
+# 跨域请求
+[cors]
+# 是否启用
+enable=false
+
+
+
+# redis配置
+[redis]
+# 地址
+addr = "127.0.0.1:6379"
+# 密码
+password = ""
+
+
+# gorm
+[gorm]
+# 是否开启调试模式
+debug = true
+# 数据库前缀
+table_prefix = "db_"
+# 是否开启自动映射数据库表结构
+enable_auto_migrate = true
+
+
+# mysql
+[mysql]
+# 连接地址
+host = "127.0.0.1"
+# 连接端口
+port = 3306
+# 用户名
+user = "root"
+# 密码
+password = "123456"
+# 数据库
+db_name = "music"
+# 连接参数
+parameters = "charset=utf8mb4&parseTime=True&loc=Local&allowNativePasswords=true"

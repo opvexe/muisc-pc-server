@@ -10,6 +10,8 @@ import (
 	"time"
 )
 
+type S string
+
 /*
 	计算文件大小
 */
@@ -38,8 +40,8 @@ func HumanSizeString(bytes int64) string {
 */
 func UUID() string {
 	u := uuid.NewV1()
-	s := u.String()
-	return strings.ReplaceAll(s, "-", "")
+	str := u.String()
+	return strings.ReplaceAll(str, "-", "")
 }
 
 /*
