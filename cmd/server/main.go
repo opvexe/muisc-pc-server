@@ -1,4 +1,4 @@
-package server
+package main
 
 import (
 	"music-pc-server/internal/app/Application"
