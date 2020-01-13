@@ -1,0 +1,14 @@
+# IDE
+.idea
+.vscode
+
+# 可执行文件
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# 测试文件
+*.test
+*.DS_Store

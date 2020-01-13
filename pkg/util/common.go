@@ -49,3 +49,12 @@ func ByteToInt(b []byte) (int, error) {
 	}
 	return x, nil
 }
+
+/*
+	错误崩溃
+*/
+func HandleError(err error) {
+	if err != nil {
+		panic(err)
+	}
+}

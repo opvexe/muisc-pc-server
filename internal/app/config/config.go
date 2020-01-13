@@ -41,8 +41,8 @@ func ParseToml(path string) (*Config, error) {
 type Config struct {
 	RunMode string `toml:"run_mode"`
 	Version string `toml:"version"`
-	Log     Log    `toml:"log"`
 	HTTP    HTTP   `toml:"http"`
+	Log     Log    `toml:"log"`
 	CORS    CORS   `toml:"cors"`
 }
 
@@ -63,10 +63,23 @@ type Log struct {
 }
 
 /*
+	CORS 跨域请求配置参数
+*/
+type CORS struct {
+	Enable           bool     `toml:"enable"`
+	//AllowOrigins     []string `toml:"allow_origins"`
+	//AllowMethods     []string `toml:"allow_methods"`
+	//AllowHeaders     []string `toml:"allow_headers"`
+	//AllowCredentials bool     `toml:"allow_credentials"`
+	//MaxAge           int      `toml:"max_age"`
+}
+
+
+/*
 	Redis redis配置参数
 */
 type Redis struct {
-	Addr     string `toml:"addr"`
+	Host     string `toml:"host"`
 	Password string `toml:"password"`
 }
 
@@ -75,12 +88,12 @@ type Redis struct {
 */
 type Gorm struct {
 	Debug             bool   `toml:"debug"`
-	DBType            string `toml:"db_type"`
-	MaxLifetime       int    `toml:"max_lifetime"`
-	MaxOpenConns      int    `toml:"max_open_conns"`
-	MaxIdleConns      int    `toml:"max_idle_conns"`
-	TablePrefix       string `toml:"table_prefix"`
-	EnableAutoMigrate bool   `toml:"enable_auto_migrate"`
+	TablePrefix            string `toml:"table_prefix"`
+	//MaxLifetime       int    `toml:"max_lifetime"`
+	//MaxOpenConns      int    `toml:"max_open_conns"`
+	//MaxIdleConns      int    `toml:"max_idle_conns"`
+	//TablePrefix       string `toml:"table_prefix"`
+	//EnableAutoMigrate bool   `toml:"enable_auto_migrate"`
 }
 
 /*
@@ -93,16 +106,4 @@ type MySQL struct {
 	Password   string `toml:"password"`
 	DBName     string `toml:"db_name"`
 	Parameters string `toml:"parameters"`
-}
-
-/*
-	CORS 跨域请求配置参数
-*/
-type CORS struct {
-	Enable           bool     `toml:"enable"`
-	AllowOrigins     []string `toml:"allow_origins"`
-	AllowMethods     []string `toml:"allow_methods"`
-	AllowHeaders     []string `toml:"allow_headers"`
-	AllowCredentials bool     `toml:"allow_credentials"`
-	MaxAge           int      `toml:"max_age"`
 }

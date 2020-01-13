@@ -6,6 +6,7 @@ import (
 	"log"
 	"music-pc-server/internal/app/config"
 	"music-pc-server/internal/app/routes"
+	"music-pc-server/pkg/util"
 	"net/http"
 	"os"
 	"os/signal"
@@ -13,7 +14,7 @@ import (
 	"time"
 )
 
-const configPath = "./config/config.toml"
+const configPath = "../../config/config.toml"
 
 type Application struct {
 }
@@ -36,10 +37,9 @@ func (this *Application) handleError(err error) {
 */
 func (this *Application) Init() {
 	err := config.LoadGlobal(configPath)
-	this.handleError(err)
-
+	util.HandleError(err)
 	cfg := config.Global()
-	log.Printf("服务启动，运行模式：%s，版本号：%s，进程号：%d", cfg.RunMode, cfg.Version, os.Getpid())
+	log.Printf("服务启动，运行模式：%s，版本号：%s，进程号：%d，端口号：%d", cfg.RunMode, cfg.Version, os.Getpid(),cfg.HTTP.Port)
 
 	addr := fmt.Sprintf("%s:%d", cfg.HTTP.Host, cfg.HTTP.Port)
 	srv := &http.Server{

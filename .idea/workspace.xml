@@ -2,35 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f67ada26-b7b0-459e-8cbd-58f9d3d9c819" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/internal/app/Application/application.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/app/config/config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/app/errors/errors.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/app/handle/handle.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/app/middleware/recover.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/app/middleware/request.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/app/plus/plus.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/logs/music.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/util/response.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/application.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handle/user.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/music.log" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/server/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/middleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/middleware/cors.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/base.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/routes/api.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/service.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/common.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/encrypt.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/encrypt.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/network.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/network.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/response.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/string.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/string.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/time.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/time.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/validate.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/validate.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/app/Application/application.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/Application/application.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/app/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/app/handle/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/handle/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/app/middleware/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/middleware/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/app/middleware/rate_limit.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/middleware/rate_limit.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/app/middleware/recover.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/middleware/recover.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/app/middleware/request.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/middleware/request.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/app/plus/error.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/plus/error.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/app/plus/plus.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/plus/plus.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/app/plus/plus_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/plus/plus_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/app/routes/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/routes/api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/util/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/common.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +27,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Go Application" />
         <option value="Go File" />
       </list>
     </option>
@@ -66,11 +53,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/internal/app/web" />
+      <recent name="$PROJECT_DIR$/config" />
+      <recent name="$PROJECT_DIR$/internal/app/Application" />
       <recent name="$PROJECT_DIR$/cmd/server" />
-      <recent name="$PROJECT_DIR$/pkg" />
       <recent name="$PROJECT_DIR$/cmd" />
-      <recent name="$PROJECT_DIR$/internal/app" />
+      <recent name="$PROJECT_DIR$/internal/app/web" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/config/prod" />
@@ -87,6 +74,24 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="TestWrap400Response in music-pc-server/internal/app/plus" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="music-pc" />
+      <working_directory value="$PROJECT_DIR$/internal/app/plus" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="music-pc-server/internal/app/plus" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestWrap400Response$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.TestWrap400Response in music-pc-server/internal/app/plus" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />

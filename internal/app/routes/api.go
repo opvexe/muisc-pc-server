@@ -5,17 +5,13 @@ import (
 	"music-pc-server/internal/app/config"
 	"music-pc-server/internal/app/handle"
 	"music-pc-server/internal/app/middleware"
+	"music-pc-server/internal/app/plus"
+	"music-pc-server/pkg/util"
 )
-
-func handleError(err error) {
-	if err != nil {
-		panic(err)
-	}
-}
 
 /*
 	初始化路由
- */
+*/
 func InitWithWeb() *gin.Engine {
 	//初始化
 	cfg := config.Global()
@@ -24,18 +20,17 @@ func InitWithWeb() *gin.Engine {
 	app := gin.New()
 	app.Use(middleware.NoMethodHandler())
 
-
 	//跨域请求
-	if cfg.CORS.Enable{
+	if cfg.CORS.Enable {
 		app.Use(middleware.CorsMiddleware())
 	}
 
 	//注册/api路由
-	err:=registerRouter(app)
-	handleError(err)
+	err := registerRouter(app)
+	util.HandleError(err)
 
 	app.NoRoute(func(context *gin.Context) {
-		//util.Error(context, "请求的路径不存在")
+		plus.RespError(context,plus.MSC_NotFound)
 	})
 
 	return app
@@ -43,13 +38,12 @@ func InitWithWeb() *gin.Engine {
 
 /*
 	注册路由
- */
+*/
 func registerRouter(app *gin.Engine) error {
 
 	rg := app.Group("/api")
 
 	//身份授权中间件
-
 
 	//请求频率限制中间件
 
@@ -58,18 +52,9 @@ func registerRouter(app *gin.Engine) error {
 		//注册/api/v1/user
 		guser := v1.Group("user")
 		{
-			guser.GET(":id",handle.Get)
-			guser.GET("",handle.Get)
-			guser.GET(":id",handle.Get)
-			guser.GET(":id",handle.Get)
-			guser.GET(":id",handle.Get)
+			guser.GET(":id", handle.Get)
+			guser.GET("", handle.Get)
 		}
-
-
-
-
-
-
 
 	}
 	return nil

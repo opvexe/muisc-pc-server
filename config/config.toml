@@ -1,39 +1,39 @@
 # 运行模式(debug:调试,test:测试,release:正式)
 run_mode = "debug"
 # 版本号
-version = 1.0
+version = "1.0"
 
 
 # http配置
 [http]
 # http监听地址
-host="0.0.0.0"
+host = "0.0.0.0"
 # http监听端口
-port=9990
+port = 9990
 # http优雅关闭等待超时时长
-shutdown_timeout=30
+shutdown_timeout = 30
 
 
 
 # 日志配置
 [log]
 # 日志级别
-level=5
+level = 5
 
 
 # 跨域请求
 [cors]
 # 是否启用
-enable=false
+enable = false
 
 
 
 # redis配置
 [redis]
 # 地址
-addr = "127.0.0.1:6379"
+host = "127.0.0.1:6379"
 # 密码
-password = ""
+password = "123456"
 
 
 # gorm

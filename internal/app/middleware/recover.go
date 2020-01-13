@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"io/ioutil"
+	"log"
+	"music-pc-server/internal/app/plus"
 	"runtime"
 )
 
@@ -24,7 +26,8 @@ func RecoveryMiddleware() gin.HandlerFunc {
 		defer func() {
 			if err := recover(); err != nil {
 				stack := stack(3)
-				//TODO
+				log.Printf("[panic]:%v",stack)
+				plus.RespError(context,plus.MSC_ServerError)
 			}
 		}()
 		context.Next()
