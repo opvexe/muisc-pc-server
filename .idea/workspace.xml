@@ -3,20 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f67ada26-b7b0-459e-8cbd-58f9d3d9c819" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/app/Application/application.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/Application/application.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/app/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/config/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/app/handle/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/handle/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/app/middleware/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/middleware/auth.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/app/middleware/rate_limit.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/middleware/rate_limit.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/app/middleware/recover.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/middleware/recover.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/app/middleware/request.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/middleware/request.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/app/plus/error.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/plus/error.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/app/plus/plus.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/plus/plus.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/app/plus/plus_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/plus/plus_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/app/routes/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/routes/api.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/common.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
