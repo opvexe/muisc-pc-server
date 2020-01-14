@@ -6,5 +6,6 @@ import (
 )
 
 func Get(c *gin.Context) {
+
 	plus.RespSuccess(c,"测试数据库")
 }

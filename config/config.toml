@@ -17,8 +17,9 @@ shutdown_timeout = 30
 
 # 日志配置
 [log]
-# 日志级别
-level = 5
+# 日志级别 dev:开发者;test:测试;prod:生产
+level = "dev"
+
 
 
 # 跨域请求

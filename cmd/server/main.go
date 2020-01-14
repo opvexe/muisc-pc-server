@@ -1,10 +1,10 @@
 package main
 
 import (
-	"music-pc-server/internal/app/Application"
+	"music-pc-server/internal/app/application"
 )
 
 func main() {
-	app := Application.NewApplication()
+	app := application.NewApplication()
 	app.Init()
 }

@@ -1,4 +1,4 @@
-package Application
+package application
 
 import (
 	"context"
@@ -20,7 +20,7 @@ type Application struct {
 }
 
 func NewApplication() *Application {
-	return &Application{}
+	return new(Application)
 }
 
 /*
