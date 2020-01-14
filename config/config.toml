@@ -3,7 +3,6 @@ run_mode = "debug"
 # 版本号
 version = "1.0"
 
-
 # http配置
 [http]
 # http监听地址
@@ -14,12 +13,19 @@ port = 9990
 shutdown_timeout = 30
 
 
-
 # 日志配置
 [log]
 # 日志级别 dev:开发者;test:测试;prod:生产
 level = "dev"
 
+# 请求频率限制
+[rate_limit]
+# 是否开启
+enable = false
+# 每分钟每个用户最大请求数量
+count = 300
+# redis数据库
+redis_db = 10
 
 
 # 跨域请求

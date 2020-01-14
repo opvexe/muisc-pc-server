@@ -18,7 +18,11 @@ func InitWithWeb() *gin.Engine {
 	gin.SetMode(cfg.RunMode)
 
 	app := gin.New()
+	//崩溃恢复
 	app.Use(middleware.RecoveryMiddleware())
+
+	//频率设置
+	app.Use(middleware.RateLimitMiddleware())
 
 	//跨域请求
 	if cfg.CORS.Enable {
