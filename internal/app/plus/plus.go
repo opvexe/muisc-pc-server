@@ -20,7 +20,6 @@ func GetToken(c *gin.Context) string {
 	return token
 }
 
-
 /* =============================        Response       =====================================*/
 
 /*
@@ -74,7 +73,7 @@ func RespError(c *gin.Context, err error, status ...int) {
 	if len(status) > 0 {
 		resp.StatusCode = status[0]
 	}
-	if err := resp.ERR;err!=nil{
+	if err := resp.ERR; err != nil {
 		c.AbortWithStatusJSON(resp.StatusCode, gin.H{
 			"code":    resp.Code,
 			"message": resp.ERR,
@@ -147,18 +146,19 @@ func NewWrapResponse(code int, msg string, status ...int) error {
 	}
 	return resp
 }
+
 /*
 	状态码为400请求错误
 */
-func NewWrap400Response(msg  string) error {
-	return NewWrapResponse(400,msg,400)
+func NewWrap400Response(msg string) error {
+	return NewWrapResponse(400, msg, 400)
 }
 
 /*
 	服务器500响应错误
 */
-func NewWrap500Response(msg  string) error {
-	return NewWrapResponse(500,msg,500)
+func NewWrap500Response(msg string) error {
+	return NewWrapResponse(500, msg, 500)
 }
 
 /*

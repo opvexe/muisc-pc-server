@@ -2,6 +2,8 @@
 run_mode = "debug"
 # 版本号
 version = "1.0"
+# 项目名称
+app_name = "muisc-pc-server"
 
 # http配置
 [http]
@@ -12,11 +14,25 @@ port = 9990
 # http优雅关闭等待超时时长
 shutdown_timeout = 30
 
+# 邮箱
+[email]
+# 邮箱地址
+host = "smtp.163.com"
+# 邮箱端口
+port = 465
+# 邮箱用户 发件人
+send = "taoshumin_vendor@sensetime.com"
+# 邮箱授权码
+pass = ""
+# 收件人邮箱
+recive = "1743065086@qq.com"
 
 # 日志配置
 [log]
 # 日志级别 dev:开发者;test:测试;prod:生产
 level = "dev"
+# 日志路径
+out_file = "../pkg/logs/service_bussiness.log"
 
 # 请求频率限制
 [rate_limit]

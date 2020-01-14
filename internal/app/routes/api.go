@@ -6,7 +6,6 @@ import (
 	"music-pc-server/internal/app/handle"
 	"music-pc-server/internal/app/middleware"
 	"music-pc-server/internal/app/plus"
-	"music-pc-server/pkg/util"
 )
 
 /*
@@ -18,6 +17,8 @@ func InitWithWeb() *gin.Engine {
 	gin.SetMode(cfg.RunMode)
 
 	app := gin.New()
+
+	app.Use(middleware.AnalysisMiddleware())
 	//崩溃恢复
 	app.Use(middleware.RecoveryMiddleware())
 
@@ -30,11 +31,10 @@ func InitWithWeb() *gin.Engine {
 	}
 
 	//注册/api路由
-	err := registerRouter(app)
-	util.HandleError(err)
+	registerRouter(app)
 
 	app.NoRoute(func(context *gin.Context) {
-		plus.RespError(context,plus.MSC_NotFound)
+		plus.RespError(context, plus.MSC_NotFound)
 	})
 
 	return app
@@ -43,7 +43,7 @@ func InitWithWeb() *gin.Engine {
 /*
 	注册路由
 */
-func registerRouter(app *gin.Engine) error {
+func registerRouter(app *gin.Engine) {
 
 	rg := app.Group("/api")
 
@@ -61,5 +61,5 @@ func registerRouter(app *gin.Engine) error {
 		}
 
 	}
-	return nil
+
 }

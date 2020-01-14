@@ -6,6 +6,7 @@ import (
 	"log"
 	"music-pc-server/internal/app/config"
 	"music-pc-server/internal/app/routes"
+	"music-pc-server/pkg/logs"
 	"music-pc-server/pkg/util"
 	"net/http"
 	"os"
@@ -14,7 +15,7 @@ import (
 	"time"
 )
 
-const configPath = "../../config/config.toml"
+const configPath = "../config/config.toml"
 
 type Application struct {
 }
@@ -24,23 +25,20 @@ func NewApplication() *Application {
 }
 
 /*
-	处理崩溃
-*/
-func (this *Application) handleError(err error) {
-	if err != nil {
-		panic(err)
-	}
-}
-
-/*
 	启动服务
 */
-func (this *Application) Init() {
+func (this *Application) Start() {
+	//获取配置文件
 	err := config.LoadGlobal(configPath)
 	util.HandleError(err)
 	cfg := config.Global()
-	log.Printf("服务启动，运行模式：%s，版本号：%s，进程号：%d，端口号：%d", cfg.RunMode, cfg.Version, os.Getpid(),cfg.HTTP.Port)
 
+	//初始化日志
+	logs.InitLog()
+
+	log.Printf("服务启动，运行模式：%s，版本号：%s，进程号：%d，端口号：%d", cfg.RunMode, cfg.Version, os.Getpid(), cfg.HTTP.Port)
+
+	//初始化http服务
 	addr := fmt.Sprintf("%s:%d", cfg.HTTP.Host, cfg.HTTP.Port)
 	srv := &http.Server{
 		Addr:         addr,
@@ -56,6 +54,7 @@ func (this *Application) Init() {
 		}
 	}()
 
+	//优雅的关闭
 	quit := make(chan os.Signal)
 	signal.Notify(quit, syscall.SIGHUP, syscall.SIGINT, syscall.SIGTERM, syscall.SIGQUIT, syscall.SIGTSTP)
 	<-quit

@@ -41,6 +41,8 @@ func ParseToml(path string) (*Config, error) {
 type Config struct {
 	RunMode string `toml:"run_mode"`
 	Version string `toml:"version"`
+	AppName string `toml:"app_name"`
+	Email   Email  `toml:"email"`
 	HTTP    HTTP   `toml:"http"`
 	Log     Log    `toml:"log"`
 	CORS    CORS   `toml:"cors"`
@@ -55,25 +57,34 @@ type HTTP struct {
 	ShutdownTimeout int    `toml:"shutdown_timeout"`
 }
 
+// Email 邮箱配置
+type Email struct {
+	Host   string `toml:"host"`
+	Port   int    `toml:"port"`
+	Send   string `toml:"send"`
+	Pass   string `toml:"pass"`
+	Recive string `toml:"recive"`
+}
+
 /*
 	LOG log参数配置
 */
 type Log struct {
-	Level int `toml:"level"`
+	Level   string `toml:"level"`
+	OutFile string `toml:"out_file"`
 }
 
 /*
 	CORS 跨域请求配置参数
 */
 type CORS struct {
-	Enable           bool     `toml:"enable"`
+	Enable bool `toml:"enable"`
 	//AllowOrigins     []string `toml:"allow_origins"`
 	//AllowMethods     []string `toml:"allow_methods"`
 	//AllowHeaders     []string `toml:"allow_headers"`
 	//AllowCredentials bool     `toml:"allow_credentials"`
 	//MaxAge           int      `toml:"max_age"`
 }
-
 
 /*
 	Redis redis配置参数
@@ -87,8 +98,8 @@ type Redis struct {
 	Gorm gorm配置参数
 */
 type Gorm struct {
-	Debug             bool   `toml:"debug"`
-	TablePrefix            string `toml:"table_prefix"`
+	Debug       bool   `toml:"debug"`
+	TablePrefix string `toml:"table_prefix"`
 	//MaxLifetime       int    `toml:"max_lifetime"`
 	//MaxOpenConns      int    `toml:"max_open_conns"`
 	//MaxIdleConns      int    `toml:"max_idle_conns"`

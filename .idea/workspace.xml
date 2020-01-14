@@ -4,16 +4,16 @@
     <list default="true" id="f67ada26-b7b0-459e-8cbd-58f9d3d9c819" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/config.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/app/middleware/cors.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/middleware/cors.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/app/middleware/request.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/middleware/request.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/app/application/application.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/application/application.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/app/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/app/middleware/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/middleware/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/app/middleware/recover.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/middleware/recover.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/app/plus/error.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/plus/error.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/app/routes/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/routes/api.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/pkg/errors/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/pkg/errors/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/pkg/errors/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/pkg/errors/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/pkg/errors/appveyor.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/pkg/errors/errors.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/pkg/errors/stack.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/logs/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/logs/log.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/util/string.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/string.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/modules.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/modules.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,14 +47,14 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sass-pc-server" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/ginweb" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cmd" />
       <recent name="$PROJECT_DIR$/config" />
       <recent name="$PROJECT_DIR$/internal/app/Application" />
       <recent name="$PROJECT_DIR$/cmd/server" />
-      <recent name="$PROJECT_DIR$/cmd" />
       <recent name="$PROJECT_DIR$/internal/app/web" />
     </key>
     <key name="CopyFile.RECENT_KEYS">

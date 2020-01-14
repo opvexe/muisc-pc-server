@@ -13,7 +13,7 @@ type Data struct {
 
 /*
 	自定义http请求
- */
+*/
 func CustomHttpRequest(method, url string, p interface{}) (interface{}, error) {
 
 	req := &fasthttp.Request{}
@@ -41,10 +41,10 @@ func CustomHttpRequest(method, url string, p interface{}) (interface{}, error) {
 
 	var param Data
 
-	err=json.Unmarshal(resp.Body(),&param)
+	err = json.Unmarshal(resp.Body(), &param)
 
-	if err!=nil {
-		return nil,err
+	if err != nil {
+		return nil, err
 	}
 
 	return param, nil
