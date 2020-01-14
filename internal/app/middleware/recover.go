@@ -6,6 +6,7 @@ import (
 	"music-pc-server/internal/app/plus"
 	"music-pc-server/pkg/logs"
 	"music-pc-server/pkg/util"
+	"strconv"
 	"time"
 )
 
@@ -38,7 +39,6 @@ func RecoveryMiddleware() gin.HandlerFunc {
 		}()
 		//上报用户活跃状态
 		go SendDataAnalysis(context)
-
 		context.Next()
 	}
 }
@@ -47,6 +47,7 @@ func RecoveryMiddleware() gin.HandlerFunc {
 	上报用户状态
 */
 func SendDataAnalysis(c  *gin.Context)  {
+	//异常崩溃
 	defer func() {
 		if err := recover(); err != nil {
 			plus.RespError(c,plus.MSC_ServerError)
@@ -57,7 +58,7 @@ func SendDataAnalysis(c  *gin.Context)  {
 	var d  DataAnalysisModel
 	d.RequestTime = util.TimeTransformDateString(time.Now())
 	d.RequstURL = c.Request.URL.Path
-	//TODO 用户id
+	d.UserId,_= strconv.Atoi(c.Request.Header.Get("userid"))
 	DataAnalysisCh<-d
 }
 
@@ -69,7 +70,10 @@ func HandleChannel() {
 	for {
 		select {
 		case c :=<-DataAnalysisCh:
-			fmt.Println(c)
+			_, err := util.CustomHttpRequest("POST","",c)
+			if err!=nil {
+				logs.DBCNormalLogger.Error(err.Error())
+			}
 		default:
 			time.Sleep(10*time.Second)  //当前没有数据处理
 		}
