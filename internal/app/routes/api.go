@@ -6,6 +6,7 @@ import (
 	"music-pc-server/internal/app/handle"
 	"music-pc-server/internal/app/middleware"
 	"music-pc-server/internal/app/plus"
+	"github.com/gin-contrib/pprof"
 )
 
 /*
@@ -17,6 +18,11 @@ func InitWithWeb() *gin.Engine {
 	gin.SetMode(cfg.RunMode)
 
 	app := gin.New()
+
+	//性能测试
+	if cfg.RunMode != gin.ReleaseMode {
+		pprof.Register(app)
+	}
 
 	app.Use(middleware.AnalysisMiddleware())
 	//崩溃恢复

@@ -1,18 +1,25 @@
 package config
 
-import "github.com/BurntSushi/toml"
+import (
+	"errors"
+	"github.com/BurntSushi/toml"
+	"sync"
+)
 
 var global *Config
+var once sync.Once
 
 /*
-	加载全局变量
+	加载全局变量 单利模式只初始化一次
 */
 func LoadGlobal(path string) error {
-	c, err := ParseToml(path)
-	if err != nil {
-		return err
+	once.Do(func() {
+		c, _ := ParseToml(path)
+		global = c
+	})
+	if global == nil {
+		return errors.New("get global equal nil")
 	}
-	global = c
 	return nil
 }
 
@@ -20,9 +27,6 @@ func LoadGlobal(path string) error {
 	获取全局配置
 */
 func Global() *Config {
-	if global == nil {
-		return &Config{}
-	}
 	return global
 }
 
