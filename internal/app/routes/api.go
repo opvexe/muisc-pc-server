@@ -23,14 +23,12 @@ func InitWithWeb() *gin.Engine {
 	if cfg.RunMode != gin.ReleaseMode {
 		pprof.Register(app)
 	}
-
+	//上报用户活跃状态
 	app.Use(middleware.AnalysisMiddleware())
 	//崩溃恢复
 	app.Use(middleware.RecoveryMiddleware())
-
 	//频率设置
 	app.Use(middleware.RateLimitMiddleware())
-
 	//跨域请求
 	if cfg.CORS.Enable {
 		app.Use(middleware.CorsMiddleware())
@@ -67,5 +65,4 @@ func registerRouter(app *gin.Engine) {
 		}
 
 	}
-
 }
